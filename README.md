@@ -39,7 +39,9 @@ npm run build
 - 部署命令：`npm run deploy`
 - 根目录：留空。
 - 环境变量：`NODE_VERSION=24`
-- `wrangler.jsonc` 的 `name` 必须与 Cloudflare 中的 Worker 名称一致，当前为 `illust`。
+- `deploy/wrangler.jsonc` 的 `name` 必须与 Cloudflare 中的 Worker 名称一致，当前为 `illust`。
 - 使用提交的 `package-lock.json` 和锁定的 Wrangler 4.92.0。不要在部署步骤安装 `wrangler@latest`。
 - 配置显式指定静态资源 `dist/client`，避免触发框架自动配置和依赖升级。
 - 本地验证部署配置：`npm run deploy -- --dry-run`（不会发布）。
+
+部署配置单独位于 `deploy/`，由 `npm run deploy` 显式加载。不要将它移回根目录：当前 Vinext 版本会把根目录 Wrangler 配置识别为服务端 Workers 构建，要求 Cloudflare Vite 插件；本项目使用静态导出。

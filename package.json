@@ -8,10 +8,10 @@
   "scripts": {
     "dev": "vinext dev",
     "build": "vinext build",
-    "start": "wrangler dev --config wrangler.jsonc --port 3000",
+    "start": "wrangler dev --config deploy/wrangler.jsonc --port 3000",
     "lint": "oxlint",
     "format": "oxfmt",
-    "deploy": "wrangler deploy --config wrangler.jsonc"
+    "deploy": "wrangler deploy --config deploy/wrangler.jsonc"
   },
   "dependencies": {
     "@base-ui/react": "1.7.0",
