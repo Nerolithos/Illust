@@ -118,5 +118,20 @@
     "id": "rosmontis-waking-3",
     "width": 2553,
     "height": 2883
+  },
+  {
+    "id": "ibuki",
+    "width": 1668,
+    "height": 2388
+  },
+  {
+    "id": "maki",
+    "width": 1668,
+    "height": 1940
+  },
+  {
+    "id": "rosmontis-dreaming",
+    "width": 2434,
+    "height": 2434
   }
 ]

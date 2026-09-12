@@ -32,6 +32,9 @@ const selections = [
  ['IMG_4210','Reisa','蓝紫色长发、水手服与星形光环的少女'], // 22
  ['IMG_6378','Kisaki','身穿深色旗袍的黑发少女'], // 23
  ['rosmontis-waking-3','Rosmontis Waking','白衬衫、银色猫耳与绿色眼睛的迷迭香'], // 24
+ ['ibuki','Ibuki','草地与喷泉前的金发少女'], // 25
+ ['maki','Maki','红发少女穿着休闲外套比出胜利手势'], // 26
+ ['rosmontis-dreaming','Rosmontis Dreaming','趴在桌上睡着的银发猫耳少女'], // 27
 ];
 const works=selections.map(([id,title,alt])=>({...artworkData.find(a=>a.id===id)!,title,alt}));
 function sources(work:typeof works[number]) {return [480,960,1600].map(size=>`/images/${work.id}-${size}.webp ${Math.round(work.width*Math.min(1,size/Math.max(work.width,work.height)))}w`).join(', ')}
