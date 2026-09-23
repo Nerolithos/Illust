@@ -27,5 +27,3 @@
 @media(max-width:1050px) and (min-width:801px){.intro-main h1{font-size:48px;letter-spacing:-3px}.intro-main{grid-template-columns:minmax(260px,1.15fr) minmax(155px,.9fr) 205px;gap:8px}.model-stage{height:240px}}
 @media(max-width:800px){.intro-main{grid-template-columns:1fr 1fr;gap:20px}.intro-main h1{font-size:52px}.model-stage{grid-column:1/-1;grid-row:2;width:260px;height:250px;justify-self:center;margin-top:-15px}.intro-side{grid-column:2;grid-row:1}.intro-main .second-line{padding-left:0}}
 @media(max-width:600px){.intro-main{display:flex;flex-wrap:wrap;gap:0}.intro-main h1{font-size:clamp(46px,11.8vw,68px);width:100%}.model-stage{width:250px;height:240px;margin:0 auto}.intro-side{margin-top:5px}.model-hint{bottom:0}}
-
-@media(min-width:601px){.artwork.spotlight{grid-column:1/-1}.spotlight .image-frame{aspect-ratio:16/9;background:#2b1318}.spotlight .image-frame img{object-fit:contain}}
