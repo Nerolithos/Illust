@@ -9,7 +9,7 @@ import FloatingModels from './floating-models';
 // 按展示顺序排列：[图片编号, 作品名称, 图片描述]；行末为作品序号。
 const selections = [
  ['IMG_7440','Comfy Rosmontis ','阳光、微风与一个悠长的午后'], // 01
- ['bartender-lapuma',"Bartender La'puma",'酒吧中手持调酒壶的黑发少女'], // 02
+ ['bartender-lapuma',"Bartender La'pluma",'酒吧中手持调酒壶的黑发少女'], // 02
  ['susie-the-barber','Susie the Barber','理发店里的少女与暖色灯光'], // 03
  ['IMG_6465','Myrtle','红发少女与暖色光影'], // 04
  ['IMG_2548','Rosmontis in Gown','云海中的银发少女'], // 05
@@ -27,7 +27,7 @@ const selections = [
  ['IMG_5679','Lappland','银发角色服装习作'], // 17
  ['IMG_4153','Rosmontis','蓝色外套与白发少女'], // 18
  ['IMG_3574','Kei','粉色背景中的角色习作'], // 19
- ['IMG_9449','Not a Dog','粉发少女肖像'], // 20
+ ['IMG_9449','Miss Susie','粉发少女肖像'], // 20
  ['IMG_8209','Ryuuu','黑色尖帽与绿色眼睛'], // 21
  ['IMG_4889','Alice','青色背景中的角色肖像'], // 22
  ['IMG_2744','Cynisca','蓝白服饰角色插画'], // 23
@@ -39,7 +39,7 @@ const selections = [
  ['rosmontis-dreaming','Rosmontis Dreaming','趴在桌上睡着的银发猫耳少女'], // 29
 ];
 const works=selections.map(([id,title,alt])=>({...artworkData.find(a=>a.id===id)!,title,alt}));
-const isWide=(index:number)=>index===0 || index===2 || index===12;
+const isWide=(index:number)=>index===0 || index===2 || index===8 || index===12;
 function sources(work:typeof works[number]) {return [480,960,1600].map(size=>`/images/${work.id}-${size}.webp ${Math.round(work.width*Math.min(1,size/Math.max(work.width,work.height)))}w`).join(', ')}
 
 export default function Home(){
