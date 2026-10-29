@@ -16,33 +16,34 @@ const selections = [
  ['IMG_9984','Koishi','街角、黑猫与一束日光'], // 06
  ['rosmon-xp','RosmonXP','横版迷迭香角色插画'], // 07
  ['IMG_0345','Cecilia','草地上的少女肖像'], // 08
- ['IMG_7079','Tsugu','黑色贝雷帽与柔和目光'], // 09
- ['IMG_8195','Weedy','圆月前的角色插画'], // 10
- ['IMG_7838','The Blue Devil','蓝白色角色习作'], // 11
- ['eyjafjalla','Eyjafjalla','横版艾雅法拉角色插画'], // 12
- ['IMG_7670','Thumpy','抱着披萨的兔耳少女'], // 13
- ['IMG_5382','Huizhou Daybreak','暮色海岸与远方的云'], // 14
- ['IMG_3631','Miyu','树影中的蓝衣少女'], // 15
- ['IMG_2398','Tachibana Sherry','室内场景中的蓝发少女'], // 16
- ['IMG_4827','Hilda','柔光下的角色肖像'], // 17
- ['IMG_4315','La Pluma','清澈水面与夏日少女'], // 18
- ['IMG_5679','Lappland','银发角色服装习作'], // 19
- ['IMG_4153','Rosmontis','蓝色外套与白发少女'], // 20
- ['IMG_3574','Kei','粉色背景中的角色习作'], // 21
- ['IMG_9449','Miss Susie','粉发少女肖像'], // 22
- ['IMG_8209','Ryuuu','黑色尖帽与绿色眼睛'], // 23
- ['IMG_4889','Alice','青色背景中的角色肖像'], // 24
- ['IMG_2744','Cynisca','蓝白服饰角色插画'], // 25
- ['IMG_4210','Reisa','蓝紫色长发、水手服与星形光环的少女'], // 26
- ['IMG_6378','Kisaki','身穿深色旗袍的黑发少女'], // 27
- ['rosmontis-waking-3','Rosmontis Waking','白衬衫、银色猫耳与绿色眼睛的迷迭香'], // 28
- ['ibuki','Ibuki','草地与喷泉前的金发少女'], // 29
- ['maki','Maki','红发少女穿着休闲外套比出胜利手势'], // 30
- ['rosmontis-dreaming','Rosmontis Dreaming','趴在桌上睡着的银发猫耳少女'], // 31
- ['IMG_6465','Myrtle','红发少女与暖色光影'], // 32
+ ['kei-before-work','Kei before work','工作前的 Kei 横版角色插画'], // 09
+ ['IMG_7079','Tsugu','黑色贝雷帽与柔和目光'], // 10
+ ['IMG_8195','Weedy','圆月前的角色插画'], // 11
+ ['IMG_7838','The Blue Devil','蓝白色角色习作'], // 12
+ ['eyjafjalla','Eyjafjalla','横版艾雅法拉角色插画'], // 13
+ ['IMG_7670','Thumpy','抱着披萨的兔耳少女'], // 14
+ ['IMG_5382','Huizhou Daybreak','暮色海岸与远方的云'], // 15
+ ['IMG_3631','Miyu','树影中的蓝衣少女'], // 16
+ ['IMG_2398','Tachibana Sherry','室内场景中的蓝发少女'], // 17
+ ['IMG_4827','Hilda','柔光下的角色肖像'], // 18
+ ['IMG_4315','La Pluma','清澈水面与夏日少女'], // 19
+ ['IMG_5679','Lappland','银发角色服装习作'], // 20
+ ['IMG_4153','Rosmontis','蓝色外套与白发少女'], // 21
+ ['IMG_3574','Kei','粉色背景中的角色习作'], // 22
+ ['IMG_9449','Miss Susie','粉发少女肖像'], // 23
+ ['IMG_8209','Ryuuu','黑色尖帽与绿色眼睛'], // 24
+ ['IMG_4889','Alice','青色背景中的角色肖像'], // 25
+ ['IMG_2744','Cynisca','蓝白服饰角色插画'], // 26
+ ['IMG_4210','Reisa','蓝紫色长发、水手服与星形光环的少女'], // 27
+ ['IMG_6378','Kisaki','身穿深色旗袍的黑发少女'], // 28
+ ['rosmontis-waking-3','Rosmontis Waking','白衬衫、银色猫耳与绿色眼睛的迷迭香'], // 29
+ ['ibuki','Ibuki','草地与喷泉前的金发少女'], // 30
+ ['maki','Maki','红发少女穿着休闲外套比出胜利手势'], // 31
+ ['rosmontis-dreaming','Rosmontis Dreaming','趴在桌上睡着的银发猫耳少女'], // 32
+ ['IMG_6465','Myrtle','红发少女与暖色光影'], // 33
 ];
 const works=selections.map(([id,title,alt])=>({...artworkData.find(a=>a.id===id)!,title,alt}));
-const wideIds=new Set(['IMG_7440','susie-the-barber','good-morning-terra','rosmon-xp','IMG_8195','eyjafjalla','IMG_5382']);
+const wideIds=new Set(['IMG_7440','susie-the-barber','good-morning-terra','rosmon-xp','kei-before-work','IMG_8195','eyjafjalla','IMG_5382']);
 const isWide=(work:typeof works[number])=>wideIds.has(work.id);
 function sources(work:typeof works[number]) {return [480,960,1600].map(size=>`/images/${work.id}-${size}.webp ${Math.round(work.width*Math.min(1,size/Math.max(work.width,work.height)))}w`).join(', ')}
 
